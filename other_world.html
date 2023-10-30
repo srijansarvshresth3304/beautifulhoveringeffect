@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Language Exchange Community</title>
+        <link rel="stylesheet" href="other_world.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to Language Exchange Community</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Chat</a></li>
+                <li><a href="#">Tutorials</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="chat">
+                <h2>Chat with People</h2>
+                <div class="chat-container" id="chat-container">
+                    <!-- Messages will be added dynamically here -->
+                </div>
+                <div class="chat-input">
+                    <input
+                        type="text"
+                        id="message-input"
+                        placeholder="Type your message"
+                    />
+                    <button id="send-button">Send</button>
+                </div>
+            </section>
+
+            <section id="tutorials">
+                <h2>Language Tutorials</h2>
+                <!-- Tutorials content here -->
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 Language Exchange Community</p>
+        </footer>
+        <script>
+            // Function to add a message to the chat container
+            function addMessage(content, isSent) {
+                const chatContainer = document.getElementById('chat-container');
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add(
+                    'message',
+                    isSent ? 'sent' : 'received'
+                );
+                messageDiv.innerHTML = `<p><strong>${
+                    isSent ? 'You' : 'User1'
+                }:</strong> ${content}</p>`;
+                chatContainer.appendChild(messageDiv);
+            }
+
+            // Send button click event
+            document
+                .getElementById('send-button')
+                .addEventListener('click', function () {
+                    const messageInput =
+                        document.getElementById('message-input');
+                    const messageContent = messageInput.value;
+
+                    if (messageContent.trim() !== '') {
+                        addMessage(messageContent, true); // Add sent message to chat
+                        messageInput.value = ''; // Clear the input
+                        // Simulate receiving a message (you can replace this with actual message from another user)
+                        setTimeout(function () {
+                            const receivedMessage =
+                                'Hi! I received your message.';
+                            addMessage(receivedMessage, false); // Add received message to chat
+                        }, 1000);
+                    }
+                });
+
+            // Simulate an initial received message (you can replace this with actual messages)
+            setTimeout(function () {
+                const receivedMessage = 'Hello! How are you?';
+                addMessage(receivedMessage, false); // Add received message to chat
+            }, 1000);
+        </script>
+    </body>
+</html>

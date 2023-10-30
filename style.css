@@ -1,0 +1,173 @@
+/* Make it more beautiful */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: cadetblue;
+}
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(to right, chartreuse, blue, violet, yellow);
+}
+.navleft {
+    width: 60vw;
+    height: 30vh;
+    border: 2px solid black;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    /* border-right: none; */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-right: none;
+    /* margin: 0; */
+    border: none;
+}
+.navleft p {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    font-weight: bolder;
+}
+.navright {
+    display: flex;
+    width: 40vw;
+    height: 20vh;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    /* border: 0.1px solid white; */
+    /* border-radius: 20px; */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: none;
+    border-right: 2px solid black;
+    /* margin: 0; */
+    border: none;
+}
+.nav1,
+.nav2 {
+    width: 100%;
+    height: 50%;
+    border: 2px solid black;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: none;
+    border: none;
+}
+.nav1 p,
+.nav2 p {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    font-weight: bolder;
+    color: yellow;
+}
+.nav1 {
+    border-bottom: none;
+}
+.nav2 {
+    border-top: none;
+}
+#box1,
+#box3 {
+    width: 100vw;
+    height: 20vh;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border: none;
+}
+#box2 button a{
+    text-decoration: none;
+    color: yellow;
+}
+#box1 {
+    height: 30vh;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+#box2 {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgb(236, 154, 154); */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: none;
+}
+#box2 button {
+    padding: 20px;
+    border-radius: 10px;
+    color: yellow;
+    font-weight: bolder;
+    font-size: 3vh;
+    background: linear-gradient(to right, chartreuse, blue, violet, yellow);
+    width: 300px;
+    transition: all 1s ease;
+}
+#box2 button:hover {
+    background: linear-gradient(to left, chartreuse, blue, violet, yellow);
+    color: white;
+    transform: scale(1.04);
+    border-radius: 100px;
+}
+.box {
+    border: 2px solid black;
+    color: yellow;
+    font-weight: bolder;
+    font-size: 3vh;
+}
+
+.box {
+    border: 2px solid black;
+    color: yellow;
+    font-weight: 500; /* adjust font weight */
+    font-size: 3vh;
+    transition: all 1s ease;
+}
+
+.navleft,
+.navright,
+.nav1,
+.nav2,
+#box2,
+#box3 {
+    transition: all 1s ease;
+}
+.navleft:hover,
+.nav1:hover,
+.nav2:hover,
+#box2:hover,
+#box3:hover {
+    background: linear-gradient(to left, chartreuse, blue, violet, yellow);
+    color: white;
+    transform: scale(1.04);
+    border-radius: 100px;
+}
+#box2 button a:hover{
+    color: white;
+}
+.nav1 p:hover,
+.nav2 p:hover {
+    color: white;
+}
